@@ -17,12 +17,12 @@ module.exports = class Unifi {
         try {
             await this.login(config.unifi.user, config.unifi.password);
             if(!this.connected) {
-                console.log("Connection to Unifi Controller Established.");
+                console.info("Connection to Unifi Controller Established.");
             }
             this.connected = true;
             return true;
         } catch (err) {
-            console.log("Connection to Unifi Controller Failed: " + err);
+            console.error("Connection to Unifi Controller Failed: " + err);
             this.connected = false;
             return false;
         }
@@ -49,7 +49,7 @@ module.exports = class Unifi {
                 return data;
             }
         } catch(err) {
-            console.log("Unifi Controller Failure : " + err);
+            console.error("Unifi Controller Failure : " + err);
             this.connected = false;
         }
         return false;
