@@ -49,9 +49,9 @@ unifi.init();
 mongoose.connect(config.mongodb.uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
-}).catch(err => console.log(err));
+}).catch(err => console.error(err));
 
-mongoose.connection.on('connected', () => console.log('Connected Mongodb'));
+mongoose.connection.on('connected', () => console.info('Connected Mongodb'));
 //TODO: Add Webhook for Bot instead of polling
 
 httpServer.use(restify.plugins.bodyParser());
