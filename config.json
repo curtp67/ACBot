@@ -1,0 +1,66 @@
+{
+    "name": "XXX",
+    "version": ".1",
+    "bot": {
+        "token": "XXXX:XXXXX",
+        "groups": [
+            {"main" :  12345}
+        ]
+    },
+    "graph": {
+        "clientId": "XXXX",
+        "clientSecret": "XXXX",
+        "accessTokenUri": "XXXXX",
+        "authorizationUri": "XXXX",
+        "redirectUri": "https://localhost/api",
+        "scopes": [
+            "Sites.Manage.All",
+            "User.Read.All",
+            "Calendars.ReadWrite.Shared",
+            "Directory.Read.All",
+            "Mail.Send",
+            "offline_access"
+        ],
+        "version": "v1.0",
+        "tokenDB": "GraphToken"
+    },
+    "restify": {
+        "key": "XXXX",
+        "certificate": "XXXX",
+        "port": 443
+    },
+    "mongodb": {
+        "uri": "mongodb://localhost:27017/api"
+    },
+    "sharepoint": {
+        "lists": {
+        "Mitglieder": "XXXX",
+        "MVCheckIn": "XXXX",
+        "Benutzerinformationsliste": "XXXX"
+        }
+    },
+    "calendar": {
+        "rooms": [
+            "Kreativzimmer",
+            "Kundenzimmer",
+            "Seminarraum"
+        ],
+        "events" : "Eventkalender",
+        "timezone": "Europe/Berlin",
+        "availabilityViewInterval": "30"
+    },
+    "delve": {
+        "groups": {
+            "Vorstand" :  "XXXX",
+            "TPM" : "XXXX"
+            }
+    },
+    "unifi" : {
+        "uri": "buero.acintern.de",
+        "port": "443",
+        "user": "XXXX",
+        "password": "XXXX",
+        "site": "XXX",
+        "excludeSSIDS" : ["AC Devices"]
+    }
+}
