@@ -106,10 +106,9 @@ async function sendMessage(chatID, message) {
     }
 }
 
-bot.on('inline_query', searchMembers); // For some reason here?
+bot.on('inline_query', searchMembers);
 
 async function searchMembers(ctx) {
-    //TODO: Cache searches (Telegram does automatically?)
     try {
         let parameters = {};
         let resultTop = 5;
@@ -147,7 +146,7 @@ async function searchMembers(ctx) {
                 vcard.organization = "Academy Consult";
                 resultContacts.push({
                     type: "contact",
-                    id: contacts[i].id, //TODO: Is this info redundant?
+                    id: contacts[i].id,
                     first_name: contacts[i].fields.Vorname,
                     last_name: contacts[i].fields.Nachname,
                     phone_number: contacts[i].fields.Handynummer,
@@ -982,7 +981,7 @@ bot.use(jhvMenu.init(  {
 bot.use(contactMenu.init());
 
 bot.command('profile', getOwnProfile);
-//Don't block thread
+
 bot.command('details', async function(ctx) {
     getUserDetails(ctx).catch(handleError);
 });

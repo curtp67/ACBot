@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const mongooseStringQuery = require('mongoose-string-query');
 
-// TODO: Add Caching / Refactor as Object
-
 const graphTokenSchema = new mongoose.Schema(
 	{
 		chatID: {
